@@ -19,8 +19,7 @@ import { useState } from "react";
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
 // Export syntaxı, test kitaplığının diziyi içe aktarabilmesi için gereklidir.
 
-//export kaldırıldı
-const enIyilerListesi = [
+export const enIyilerListesi = [
   { id: "1", isim: "Ada Lovelace" },
   { id: "2", isim: "Grace Hopper" },
   { id: "3", isim: "Evelyn Boyd Granville" },

@@ -25903,7 +25903,7 @@ var uzgunRuhHali = "Oldukça üzgün :(";
 function RuhHalleri() {
   /* ADIM 1 */
 
-  var _useState = (0, _react.useState)(""),
+  var _useState = (0, _react.useState)(ilkRuhHali),
     _useState2 = _slicedToArray(_useState, 2),
     ruhHali = _useState2[0],
     setRuhHali = _useState2[1];
@@ -26054,6 +26054,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Programcilar;
+exports.enIyilerListesi = void 0;
 var _react = _interopRequireWildcard(require("react"));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -26067,7 +26068,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
 // Export syntaxı, test kitaplığının diziyi içe aktarabilmesi için gereklidir.
 
-//export kaldırıldı
 var enIyilerListesi = [{
   id: "1",
   isim: "Ada Lovelace"
@@ -26087,6 +26087,7 @@ var enIyilerListesi = [{
   id: "6",
   isim: "Carol Shaw"
 }];
+exports.enIyilerListesi = enIyilerListesi;
 function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
