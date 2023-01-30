@@ -25,7 +25,7 @@ export default function Kareler() {
   // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
   // yani  'aktifKare' null olmalı.
 
-  const [kareler, setKareler] = useState([]);
+  const [kareler, setKareler] = useState([...KareIdListesi]);
   const [aktifKare, setAktifKare] = useState(null);
 
   const ClassAdiAl = (id) => {
@@ -45,7 +45,6 @@ export default function Kareler() {
     // id bağımsız değişkenini, stateteki aktif id olacak şekilde ayarlayın
     // eğer zaten aktifse, o zaman önce state i resetlemeliyiz.
     aktifKare === id ? setAktifKare("") : setAktifKare(id);
-    setKareler([...kareler, aktifKare]);
   };
 
   return (
@@ -53,11 +52,10 @@ export default function Kareler() {
       <h2>Kareler</h2>
       <div className="squares">
         {
-          //çözülmedi???
           // Kötü bug!  'KareIdListesi' yerine bir state dilimi kullanmalıyız.
           // Şöyle diyebiliriz: "aa bu çalışıyor!" Ama kareler bir state diliminden gelmiyorsa,
           // asla yeni kare ekleyemeyiz, kareleri düzenleyemeyiz ya da silemeyiz. Düzeltin!
-          KareIdListesi.map((id) => (
+          kareler.map((id) => (
             <div
               id={id}
               key={id}
